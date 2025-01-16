@@ -14,7 +14,7 @@ export default function Registration() {
         prefCommlangauge: '',
         mobile: '',
         email: '',
-        captcha: ''
+        password: '',
     });
 
     const handleChange = (e) => {
@@ -128,8 +128,7 @@ export default function Registration() {
                             <span id="lblErroremail" className="text-red-500" tabIndex="0"></span>
                         </div>
                        
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
                         <div>
                             <div className="flex items-center">
                                 <input type="search" className="w-full p-2 border border-gray-300 rounded" id="email" placeholder="Email ID*" required maxLength="50" name="email" value={formData.email} onChange={handleChange} />
@@ -137,6 +136,11 @@ export default function Registration() {
                             <span id="lblErroremailE" className="text-red-500" tabIndex="0"></span>
                         </div>
                     </div>
+                    <div>
+                            <div className="flex items-center">
+                                <input type="password" className="w-full p-2 border border-gray-300 rounded" placeholder="Password*" required name="password" value={formData.password} onChange={handleChange} />
+                            </div>
+                        </div>
                     <div className="text-center mt-4">
                         <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded" id="registerB">Register</button>
                     </div>
